@@ -13,7 +13,7 @@ Pendant ce TP vous aurez à:
 
 Le cas d'utilisation est très simple. Il consiste en 3 entités principales: Book, Category, Author. Une Livre possède une et une seule catégorie. Un livre est associé à un ensemble d'auteurs. Un auteur est lui aussi associé potentiellement à un ensemble de livre, mais ce lien directionnel n'est pas intéressant dans l'application et ne sera pas représenté.
 Deux autres entités sous-classe de Book sont définis: PaperBook et Ebook.
-
+![shema](/uml.png "Schéma UML simplifié").
 Vous aurez à représenter le mapping pour les relations d'associations et d'héritage.
 
 Chaque classe dispose d'un DAO pour gérer l'accès JPA et d'un service pour l'accès au niveau.  L'application utilisera les services pour manipuler les données.

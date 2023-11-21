@@ -1,0 +1,16 @@
+org\tp\dao\BookDAO.class
+org\tp\dao\CRUDRepository.class
+org\tp\service\AuthorService.class
+org\tp\service\CategoryServiceImpl.class
+org\tp\dao\CategoryDAO.class
+org\tp\data\Ebook.class
+org\tp\dao\AuthorDAO.class
+org\tp\data\PaperBook.class
+org\tp\service\BookService.class
+org\tp\data\Category.class
+org\tp\Main.class
+org\tp\service\AuthorServiceImpl.class
+org\tp\data\Author.class
+org\tp\service\BookServiceImpl.class
+org\tp\data\Book.class
+org\tp\service\CategoryService.class

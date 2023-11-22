@@ -34,7 +34,7 @@ public class Main {
         // Ajouter les auteurs Author1 et Author2 comme auteurs de ce livre
 
         // ToDo: Faire persister ce livre à l'aide du service bookService (c'est une création)
-        bookService.createBook(paperBook);
+       
 
         // ToDo: refaire la même chose avec un Ebook de titre EBook1 et de format PDF.
         

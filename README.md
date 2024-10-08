@@ -23,8 +23,8 @@ A noter qu'un ensemble de classes de test sont définis afin de valider votre tr
 
 ## Installation
 
-Vous devrez forker le projet Git mis à disposition, puis le cloner le partager avec moi.
-Le projet se base sur Java 17. Tous les dépendances sont gérées par Maven.
+Vous devrez forker le projet Git mis à disposition, puis le cloner pour le partager avec moi.
+Le projet se base sur Java 17 au moins. Tous les dépendances sont gérées par Maven.
 Vous devez juste pour valider votre installation faire:
  - mvn clean
  - mvn install

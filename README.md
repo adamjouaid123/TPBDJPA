@@ -1,3 +1,6 @@
+AL JOUAID Adam
+DESFONDS Antoine
+
 # TP JPA/Hibernate
 
 L'objectif de ce TP est de découvrir l'accès à des données persistantes en Java à l'aide d'un framework de persistance JPA (Object Relational Mapping standardisé) utilisant une implémentation Hibernate.
@@ -72,3 +75,64 @@ Il vous suffit d'utiliser le contenu du fichier de configuration Oracle pour tes
 ## Rendu du TP
 
 Vous m'ajouterez à votre projet Git pour que je puisse accéder à votre code (Github: fjouanot, Gitlab: jouanotf).
+
+# Reponses 
+## Quelle sont les tables crées et leur relations (PK, FK) ?
+
+Tables Créées
+
+    Author
+        Colonnes :
+            id (bigint, clé primaire, généré automatiquement)
+            name (varchar(255))
+        Clé Primaire (PK) :
+            id
+
+    Book
+        Colonnes :
+            pageCount (integer)
+            category_id (bigint, clé étrangère)
+            id (bigint, clé primaire, généré automatiquement)
+            book_type (varchar(31), not null)
+            format (varchar(255))
+            title (varchar(255))
+        Clé Primaire (PK) :
+            id
+        Clé Étrangère (FK) :
+            category_id qui fait référence à Category(id)
+
+    book_author (table de jointure pour la relation plusieurs-à-plusieurs entre les livres et les auteurs)
+        Colonnes :
+            author_id (bigint, clé étrangère)
+            book_id (bigint, clé étrangère)
+        Clé Primaire (PK) :
+            (author_id, book_id)
+        Clés Étrangères (FK) :
+            author_id qui fait référence à Author(id)
+            book_id qui fait référence à Book(id)
+
+    Category
+        Colonnes :
+            id (bigint, clé primaire, généré automatiquement)
+            name (varchar(255))
+        Clé Primaire (PK) :
+            id
+
+## Quelles sont les requêtes générées et le lien avec le code des DAO ?
+ Chaque opération de base de données correspond généralement à une méthode dans les DAO associés :
+
+    CategoryDAO :
+        create(Category category): Insère une nouvelle catégorie.
+        delete(Category category): Supprime une catégorie.
+
+    BookDAO :
+        create(Book book): Insère un nouveau livre.
+        delete(Book book): Supprime un livre.
+        update(Book book): Met à jour les informations d'un livre.
+        findById(Long id): Recherche un livre par son ID.
+
+    AuthorDAO :
+        create(Author author): Insère un nouvel auteur.
+        delete(Author author): Supprime un auteur.
+
+    Associations : Les insertions dans book_author sont souvent gérées par une méthode dans le service ou le DAO qui associe des auteurs à un livre.
